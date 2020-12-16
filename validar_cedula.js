@@ -1,6 +1,6 @@
 //Validar cedula ecuatoriana
 //Si falla devuelve 0
-function validar_CED(cedula) => {
+function validar_CED(cedula) {
   var cad = cedula.trim();
   var total = 0;
   var longitud = cad.length;
@@ -17,15 +17,12 @@ function validar_CED(cedula) => {
       }
     }
 
-    total = total % 10 ? 10 - total % 10 : 0;
+    total = total % 10 ? 10 - (total % 10) : 0;
 
     if (cad.charAt(longitud - 1) == total) {
       return cad;
-    }
-    else {
+    } else {
       return 0;
     }
-  }
-  else return 0;
+  } else return 0;
 }
-
